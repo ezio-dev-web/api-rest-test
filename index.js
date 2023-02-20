@@ -17,7 +17,8 @@ app.use(cors({
           return callback(null, origin)
       }
       return callback("Error de CORS origin: " + origin + " No autorizado!")
-    }
+    },
+    credentials: true,
 }))
 
 app.use(express.json())
